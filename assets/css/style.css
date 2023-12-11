@@ -3,54 +3,52 @@ body, html {
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
 
-ul { list-style: none; padding-left: 5px; }
-
-*{
-    font-weight: bold;
-    text-align: left;
+ul { 
+    list-style: none; /*Tira os pontos da lista não ordenada*/
+    padding-left: 5px; /* Distância esquerda*/
 }
 
 h1, h2, h3{
-    text-align: center;
-    color: navy;
+    text-align: center; /*Alinha os títulos*/
+    color: navy; /*Muda a cor do título*/
 }
 
 p{
-    text-indent: 30px;
-    line-height: 30px;
-    text-align: justify;
-    font-size: 15pt;
+    text-indent: 30px; /*Deixa o espaço no começo do parágrafo*/
+    line-height: 30px; /*Muda o espaçamento entre as linhas*/
+    text-align: justify; /*Advinha? Justifica o texto*/
+    font-size: 15pt;/*Tamanho da fonte*/
 }
 
 hr{
-    border-color: navy;
-}
-ul li:hover{
-    padding: 15px;
-    background-color: #faf6f6;
-    border-radius: 15px;
-    text-align: center;
-    line-height: 20px;
-    color: #000000;
-    box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75);
-    -webkit-box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75);
-    -moz-box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75);
+    border-color: navy; /*Muda a cor da linha horizontal*/
 }
 
-div ul li{ /*qual motivo de eu ter que adicionar isso para as âncoras?*/
-    line-height: 40px;
+ul li:hover{
+    padding: 15px; 
+    background-color: #faf6f6;
+    border-radius: 15px; 
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75);
+    -webkit-box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75);
+    -moz-box-shadow: 14px 13px 28px -9px rgba(158,158,158,0.75); 
 }
 
 a{
-    text-decoration: none;
-    font-size: 15pt;
-    color:navy;
-
+    text-decoration: none; /*Tira a decoração dos hyperlinks*/
+    font-size: 15pt; /*Muda a fonte*/
 }
+
+div ul li{
+    line-height: 40px; /*Espaçamento das âncoras*/
+}
+
+
 figure, figcaption {
     padding-top: 2px;
     text-align: center;
-
 }
 
 input{
@@ -60,23 +58,18 @@ input{
     text-indent: 15px;
     border-color: black;
 }
+
 .image{
-    border-radius: 15px;
-}
-#part1{
-    color:navy;
-}
-#size:hover{
-    width: 400px;
-}
-.bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
-    border-color: navy;
+    border-radius: 15px; /*todas as imagens de classe image com borda arredondada*/
 }
 
+.bar {
+    background-color: #f9f9fb; /*Cor de fundo da barra que da espaço abaixo do header*/
+    padding:15px; /**/
+    border-top: solid 1px #cdcdcd; /*Borda contínua de largura 1px e cor #cdcdcd*/
+    border-bottom: solid 1px #cdcdcd; /*Borda contínua de largura 1px e cor #cdcdcd*/
+    border-color: navy; /*cor da borda*/
+}
 
 .content {
     max-width: 1440px;
@@ -84,50 +77,44 @@ input{
     grid-gap: 3rem;
     display: grid;
     gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
+    grid-template-areas: "sidebar anchors";
     grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.main{
-    text-align: justify;
-    font-size: 16px;
-    border-right: solid 1px #000000;
-}
 
 .footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+    min-height: 100px; /*Altura do footer*/
+    border-top: solid 1px navy; /*Cor da borda*/
 }
 .anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
+    border-left: solid 1px navy;
+    padding-left: 30px; /*Distância da borda esquerda*/
 }
+
 .sidebar {
-    border-right: solid 1px #cdcdcd;
-    text-align: left;
-    width: 300px;
-    line-height: 50px;
-    padding: 15px 15px;
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
-    margin-left: -70px;
+    border-right: solid 1px navy; /*Confihuração da borda*/
+    text-align: left; /*Ainhamento*/
+    width: 300px; /*Largura da barra lateral*/
+    line-height: 50px; /*Distância entre as linhas*/
+    padding: 15px 15px; /*Padding top right*/
+    margin-left: -70px; /*Margem*/
 }
 
 .header{
-    text-align: left;
+    text-align: left; /*Alinhamento*/
     position: relative;
     bottom:60px;
     left:70px;
 }
 
 .globe{
-    left: -780px;
+    left: -780px; /*Posicionando os elementos do cabeçalho*/
     position: relative;
     top: 30px;
 }
 
+/* Trecho estava sem função
 .sourcer{
     background-color: #f9f9fb;
     padding: 15px;
@@ -136,8 +123,8 @@ input{
     border: solid;
     border-color: lightgray;
 }
-
-.search{
+*/
+.search{ /*Posicionando barra de busca*/
     background-color: white;
     position: relative;
     left:1200px;
